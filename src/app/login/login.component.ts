@@ -6,14 +6,13 @@ import { AlertService } from '../services/alert.service';
 import { first } from 'rxjs/operators';
 @Component({
     selector: 'app-login',
-    moduleId: module.id,
+    // moduleId: module.id,
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.css']
   })
 export class LoginComponent implements OnInit {
-    // loginForm: FormGroup;
+
     loading = false;
-    // submitted = false;
     returnUrl: string;
     model: any = {};
 
@@ -24,38 +23,11 @@ export class LoginComponent implements OnInit {
                  private alertService: AlertService) { }
 
    ngOnInit() {
-    //    this.loginForm = this.formBuilder.group({
-    //        username: ['', Validators.required],
-    //        password: ['', Validators.required]
-    //    });
 
        this.authenticationService.logout();
 
        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
    }
-
-//    get f() {
-//        return this.loginForm.controls;
-//    }
-
-//    onSubmit() {
-//        this.submitted = true;
-//        if (this.loginForm.valid) {
-//            return;
-//        }
-
-//        this.loading = true;
-//        this.authenticationService.login(this.f.username.value, this.f.password.value)
-//        .pipe(first())
-//        .subscribe(
-//            data => {
-//                this.router.navigate([this.returnUrl]);
-//            },
-//            error => {
-//                this.alertService.error(error);
-//                this.loading = false;
-//            });
-//    }
 
    login() {
     this.loading = true;

@@ -29,37 +29,7 @@ import { Http } from '@angular/http';
                   ) { }
 
     ngOnInit() {
-        // this.registerForm = this.formBuilder.group({
-        //     firstName: ['', Validators.required],
-        //     lastName: ['', Validators.required],
-        //     userName: ['', Validators.required],
-        //     passWord: ['', [Validators.required, Validators.minLength(6)]]
-        // });
     }
-
-    // get f() {
-    //     return this.registerForm.controls;
-    // }
-
-    // onSubmit() {
-    //     this.submitted = true;
-
-    //     if (this.registerForm.invalid) {
-    //         return;
-    //     }
-    //     this.loading = true;
-    //     this.userService.register(this.registerForm.value)
-    //     .pipe(first())
-    //     .subscribe(
-    //         data => {
-    //             this.alertService.success('Registration Successful', true);
-    //             this.router.navigate(['/login']);
-    //         },
-    //     error => {
-    //         this.alertService.error(error);
-    //         this.loading = false;
-    //     });
-    // }
 
     register() {
         this.loading = true;
