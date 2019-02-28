@@ -8,16 +8,13 @@ import { Http } from '@angular/http';
 
 @Component({
     selector: 'app-register',
-    // moduleId: module.id,
     templateUrl: './register.component.html',
     styleUrls: ['./register.component.css']
   })
 
   export class RegisterComponent implements OnInit {
 
-    //   registerForm: FormGroup;
       loading =  false;
-    //   submitted = false;
       model: any = {};
 
       constructor (

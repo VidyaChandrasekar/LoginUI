@@ -1,12 +1,8 @@
 <h1>Hi {{currentUser.firstName }}</h1>
 <p>You have logged in</p>
 
-<h3>Registered Users</h3>
-
-<ul>
-    <li *ngFor = "let user of users">
-        {{user.userName}}  {{user.firstName}}  {{user.lastName}}
-        - <a (click) = "deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul>
-<p><a [routerLink] = "['/login']">LogOut</a></p>
+    <div class="ui-helper-clearfix">
+            <button type="button" pButton  [routerLink]="['/candidate-list']" label="Candidate List"> </button>
+            <button type="button" pButton [routerLink] = "['/login']" label="Log Out" ></button>
+    </div>
+   

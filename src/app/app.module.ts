@@ -16,6 +16,12 @@ import { UserService } from './services/user.service';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';
+import { DataTableModule, CalendarModule, AccordionModule } from 'primeng/primeng';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CandidateDetailsComponent } from './candidates/candidate-details/candidate-details.component';
+import { CandidateListComponent } from './candidates/candidate-list/candidate-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,9 @@ import { HttpModule } from '@angular/http';
     AlertComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CandidateDetailsComponent,
+    CandidateListComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,18 @@ import { HttpModule } from '@angular/http';
     HttpClientModule,
     FormsModule,
     routing,
-    HttpModule
+    HttpModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    AccordionModule,
+    FormsModule,
+    DataTableModule,
+    AngularFontAwesomeModule,
+    CalendarModule,
+    ReactiveFormsModule,
   ],
   providers: [
     AuthGuard,
